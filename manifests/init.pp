@@ -18,6 +18,8 @@ class fail2ban (
   $purge_jail_dot_d = true,
   $usedns           = 'warn',
   $persistent_bans  = false,
+  $includesbefore   = undef,
+  $includesafter    = undef,
 ) {
 
   validate_array($ignoreip)

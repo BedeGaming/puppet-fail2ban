@@ -16,6 +16,8 @@ class fail2ban::config {
   $action = $fail2ban::action
   $usedns = $fail2ban::usedns
   $persistent_bans = $fail2ban::persistent_bans
+  $includesbefore = $fail2ban::includesbefore
+  $includesbefore = $fail2ban::includesbefore
 
   $jail_template_name = $::osfamily ? {
     'Debian' => "${module_name}/debian_jail.conf.erb",

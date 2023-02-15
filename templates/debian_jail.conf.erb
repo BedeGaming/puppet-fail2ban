@@ -12,6 +12,14 @@
 # $Revision$
 #
 
+[INCLUDES]
+<% @includesbefore.each do |before| -%>
+before = <%= before %>
+<% end -%>
+<% @includesafter.each do |after| -%>
+after = <%= after %>
+<% end -%>
+
 # The DEFAULT allows a global definition of the options. They can be overridden
 # in each jail afterwards.
 
