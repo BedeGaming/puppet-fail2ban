@@ -13,11 +13,15 @@
 #
 [INCLUDES]
 before = paths-fedora.conf
+<% unless @includesbefore.nil? -%>
 <% @includesbefore.each do |before| -%>
 before = <%= before %>
 <% end -%>
+<% end -%>
+<% unless @includesafter.nil? -%>
 <% @includesafter.each do |after| -%>
 after = <%= after %>
+<% end -%>
 <% end -%>
 
 [DEFAULT]
