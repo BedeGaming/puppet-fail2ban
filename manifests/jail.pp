@@ -8,6 +8,7 @@ define fail2ban::jail (
   $enabled   = true,
   $protocol  = false,
   $maxretry  = false,
+  $maxmatches = false,
   $findtime  = false,
   $action    = false,
   $banaction = false,
@@ -23,6 +24,7 @@ define fail2ban::jail (
   )
   validate_bool($enabled)
   if $maxretry { validate_integer($maxretry, '', 0) }
+  if $maxmatches { validate_integer($maxmatches, '', 0) }
   if $findtime { validate_integer($findtime, '', 0) }
   if $bantime { validate_integer($bantime, '', 0) }
   validate_array($ignoreip)
